@@ -21,7 +21,9 @@ public class VehicleScript : MonoBehaviour
     public float brakeTorque;
     public bool isBraking;
 
-    // Start is called before the first frame update
+    /*
+     * Called before the first frame update
+     */
     void Start()
     {
         if (brakeTorque == 0f) brakeTorque = maxMotorTorque;
@@ -44,6 +46,7 @@ public class VehicleScript : MonoBehaviour
         Steer();
         Accelerate();
         Brake();
+        // TODO: Handbrake
     }
 
     /**
@@ -90,7 +93,9 @@ public class VehicleScript : MonoBehaviour
      */
     private void Brake()
     {
-        // !! Always assign a value to barkeTorque
+        // TODO: Apply brake using wheel friction, increase wheel ground friction
+        
+        // !! Always assign a value to brakeTorqu to avoid constant torque
         var mBrakeTorque = isBraking ? this.brakeTorque : 0f;
         
         foreach (var axle in axles.Where(axle => axle.canBrake))

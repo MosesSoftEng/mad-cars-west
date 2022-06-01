@@ -14,9 +14,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Prefabs/Camera/PlayerCameraScript.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Prefabs/Vehicles/Vehicle Buggy 01/VehicleScript.cs" />
+      <option value="$PROJECT_DIR$/Assets/Prefabs/Camera/PlayerCameraScript.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="29yoAG3jGEqdYOlU7pm6KKh5Rtv" />
@@ -63,7 +67,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1654094547176</updated>
-      <workItem from="1654095944597" duration="8905000" />
+      <workItem from="1654095944597" duration="11993000" />
     </task>
     <servers />
   </component>
@@ -72,6 +76,17 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
