@@ -106,7 +106,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2127922685650811924}
   - component: {fileID: 6451550712663167038}
-  - component: {fileID: 5829277988042649407}
   - component: {fileID: 4546172440806088142}
   - component: {fileID: 7438688718867746895}
   m_Layer: 0
@@ -147,19 +146,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &5829277988042649407
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2127922685650811925}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.25, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!82 &4546172440806088142
 AudioSource:
   m_ObjectHideFlags: 0
@@ -268,6 +254,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e83d96dc28ebffd43899178aa2555da0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxMotorTorque: 400
+  brakeTorque: 0
+  axles:
+  - leftWheelCollider: {fileID: 7796769175938158682}
+    rightWheelCollider: {fileID: 7796769176180189796}
+    leftWheelTransform: {fileID: 7796769175486030688}
+    rightWheelTransform: {fileID: 7796769175277967627}
+    canSteer: 1
+    canTorque: 0
+    canBrake: 0
+  - leftWheelCollider: {fileID: 7796769175595187792}
+    rightWheelCollider: {fileID: 7796769177357223178}
+    leftWheelTransform: {fileID: 7796769177140207418}
+    rightWheelTransform: {fileID: 7796769176615778497}
+    canSteer: 0
+    canTorque: 1
+    canBrake: 1
+  maxSteeringAngle: 30
+  horizontalInput: 0
+  verticalInput: 0.89
+  isBraking: 0
 --- !u!1 &2809318015540710213
 GameObject:
   m_ObjectHideFlags: 0
@@ -724,7 +731,7 @@ GameObject:
   - component: {fileID: 7796769175595187799}
   - component: {fileID: 7796769175595187792}
   m_Layer: 0
-  m_Name: WheelBankLeft
+  m_Name: WheelRearLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1220,7 +1227,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7796769176615778497}
   m_Layer: 0
-  m_Name: WheelBackRight
+  m_Name: WheelRearRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1333,7 +1340,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7796769177140207418}
   m_Layer: 0
-  m_Name: WheelBankLeft
+  m_Name: WheelRearLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1461,7 +1468,7 @@ GameObject:
   - component: {fileID: 7796769177357223177}
   - component: {fileID: 7796769177357223178}
   m_Layer: 0
-  m_Name: WheelBackRight
+  m_Name: WheelRearRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
