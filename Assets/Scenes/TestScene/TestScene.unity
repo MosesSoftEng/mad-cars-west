@@ -256,6 +256,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7438688718867746895, guid: 886863296c53c0a4eab9e531ebf23dc4, type: 3}
       propertyPath: isBraking
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7438688718867746895, guid: 886863296c53c0a4eab9e531ebf23dc4, type: 3}
+      propertyPath: brakeTorque
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7438688718867746895, guid: 886863296c53c0a4eab9e531ebf23dc4, type: 3}
+      propertyPath: horizontalInput
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

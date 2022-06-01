@@ -16,11 +16,15 @@ public class VehicleScript : MonoBehaviour
     [Header("Steer")]
     public float maxSteeringAngle; // maximum steer angle the wheel can have
     public float horizontalInput, verticalInput;    // Control inputs
+    
+    [Header("Brake")]
+    public float brakeTorque;
+    public bool isBraking;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (brakeTorque == 0f) brakeTorque = maxMotorTorque;
     }
 
     /**
@@ -39,6 +43,7 @@ public class VehicleScript : MonoBehaviour
         Inputs();
         Steer();
         Accelerate();
+        Brake();
     }
 
     /**
@@ -74,10 +79,22 @@ public class VehicleScript : MonoBehaviour
      */
     private void Accelerate()
     {
-        var motorTorque = maxMotorTorque * verticalInput;
+        var motorTorque = isBraking? 0f : maxMotorTorque * verticalInput;
         
         foreach (var axle in axles.Where(axle => axle.canTorque))
             axle.leftWheelCollider.motorTorque = motorTorque;
+    }
+    
+    /**
+     * Apply brake
+     */
+    private void Brake()
+    {
+        // !! Always assign a value to barkeTorque
+        var mBrakeTorque = isBraking ? this.brakeTorque : 0f;
+        
+        foreach (var axle in axles.Where(axle => axle.canBrake))
+            axle.leftWheelCollider.brakeTorque = mBrakeTorque;
     }
 
     /**
@@ -102,5 +119,6 @@ public class VehicleScript : MonoBehaviour
         public Transform leftWheelTransform, rightWheelTransform;
         public bool canSteer;
         public bool canTorque;
+        public bool canBrake;
     }
 }
