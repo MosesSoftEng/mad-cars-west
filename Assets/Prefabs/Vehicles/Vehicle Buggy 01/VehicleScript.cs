@@ -34,8 +34,15 @@ public class VehicleScript : MonoBehaviour
      */
     private void FixedUpdate()
     {
+        Inputs();
         Steer();
         Accelerate();
+    }
+
+    private void Inputs()
+    {
+        // Limit value between 0 and 1
+        horizontalMoveInput = Mathf.Clamp(horizontalMoveInput, 0f, 1f);
     }
 
     /**
